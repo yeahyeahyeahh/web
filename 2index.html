@@ -1,0 +1,120 @@
+<html>
+  <head>
+  	<title> meoww <3 </title>
+	<link rel="icon" type="image/png" href="saya3.png">
+  	<style> h1 {font-family: impact;
+  		color: whitesmoke;
+  	}
+
+  	p {
+  		font-family: impact;
+  		font-size: 22;
+  		color: whitesmoke;
+  	}
+
+
+  	body {
+  		text-align: center;
+  		background-color: black;
+     	margin: 0;
+      	padding: 0;
+      	height: 100vh;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+  	}
+
+
+  	.profile-photo {
+  		border-radius: 100%;
+  		width: 180px;
+  	}
+
+  	.webs {
+  		list-style: none;
+  		padding: 0; 
+  		margin-top: 20px;
+    	display: flex;
+    	justify-content: center;
+    	gap: 20px; 
+  	}
+
+  	.webs > li > a > img {  
+  		width: 60px;
+    	border-radius: 25%;
+    	transition: transform 0.3s;	
+  	}
+
+  	.webs > li > a:hover,
+  	.webs > li > a:focus {
+  		transform: scale(1.1);
+  		
+  	}
+
+  	.btn {
+  		margin-top: 20px;
+  		padding: 10px 20px;
+  		font-family: impact;
+  		font-size: 18px;
+  		background-color: white;
+  		color: black;
+  		border-radius: 0px;
+  		cursor: pointer;
+  		transition: background-color 0.3s, transform 0.2s;
+}
+
+  	</style>
+  </head>
+  
+  <body>
+
+  	<div class="container">
+  	<img class="profile-photo" src="./saya2.png" />
+
+  	<h1>arsyy</h1>
+
+  	<p> i love my ex </p>
+
+  	<ul class= "webs">
+  		<li>
+  			<a href="https://www.instagram.com/kowaiigrl">
+  				<img src="insta.png" width="60" style="border-radius: 35%;">
+  			</a>
+  		</li>
+  		<li>
+  			<a href="https://www.tiktok.com/@notarson">
+  				<img src="tiktok.png" width="60" style="border-radius: 110%;">
+  			</a>
+  		</li>
+  		<li>
+  			<a href="https://open.spotify.com/user/31zkqjanjyfxzgvdfxuh5jxrhkne?si=b3972bc08aef4368">
+  				<img src="spotify.png" width="60" style="border-radius: 110%;">
+  			</a>
+  		</li>
+  	</ul>
+
+  	<button id="playmusic" class="btn">bangers :3 </button>
+
+  	<audio id="music" loop>
+  		<source src="ttm.mp3" type="audio/mpeg">
+	</audio>
+
+  	</div>
+
+
+	<script>
+  		const button = document.getElementById('playmusic');
+  		const music = document.getElementById('music');
+
+  		button.addEventListener('click', function () {
+   	 	  if (music.paused) {
+      		music.play();
+      		button.textContent = 'pause :(';
+    	} else {
+     		music.pause();
+      		button.textContent = 'play :3';
+    	}
+  	  });
+	</script>
+  </body>
+</html>
